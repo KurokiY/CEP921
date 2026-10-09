@@ -423,3 +423,23 @@ Copyright (c) 1998-2026 Muthen & Muthen
 plot(r.eigen$values,type = "b", pch = 19, xlab = "Component Number", ylab = "Eigenvalue", main = "Scree Plot")
 abline(h = 1, lty = 2, col = "red")
 
+png(
+  "factor_diagram.png",
+  width = 4000,
+  height = 3000,
+  res = 600
+)
+
+semPaths(
+  fit,
+  whatLabels = "std",
+  residuals = FALSE,
+  intercepts = FALSE,
+  layout = "tree",
+  color = list(
+    lat = "white",
+    man = "white"
+  )
+)
+
+dev.off()
