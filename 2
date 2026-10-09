@@ -1,0 +1,421 @@
+#Mplus
+#Input_File
+TITLE: ASSIGNMENT 2;
+
+DATA:
+  FILE=assign2.dat;
+
+VARIABLE:
+  NAMES = V1-V10;
+  USEVARIABLES = V1-V5;
+
+ANALYSIS:
+  TYPE=EFA 1 3;
+  ESTIMATOR=MLR;
+
+#Output_File
+Mplus VERSION 9.1.1 DEMO (Mac)
+MUTHEN & MUTHEN
+10/09/2026   9:34 AM
+
+INPUT INSTRUCTIONS
+
+  TITLE: ASSIGNMENT 2;
+
+  DATA:
+    FILE=assign2.dat;
+
+  VARIABLE:
+    NAMES = V1-V10;
+    USEVARIABLES = V1-V5;
+
+  ANALYSIS:
+    TYPE=EFA 1 3;
+    ESTIMATOR=MLR;
+
+
+
+*** WARNING in ANALYSIS command
+  Too many factors were requested for EFA.
+  The maximum number of factors is set to 2.
+   1 WARNING(S) FOUND IN THE INPUT INSTRUCTIONS
+
+
+
+ASSIGNMENT 2;
+
+SUMMARY OF ANALYSIS
+
+Number of groups                                                 1
+Number of observations                                         150
+
+Number of dependent variables                                    5
+Number of independent variables                                  0
+Number of continuous latent variables                            0
+
+Observed dependent variables
+
+  Continuous
+   V1          V2          V3          V4          V5
+
+
+Estimator                                                      MLR
+Rotation                                                    GEOMIN
+Row standardization                                    CORRELATION
+Type of rotation                                           OBLIQUE
+Epsilon value                                               Varies
+Information matrix                                        OBSERVED
+Maximum number of iterations                                  1000
+Convergence criterion                                    0.500D-04
+Maximum number of steepest descent iterations                   20
+Optimization Specifications for the Exploratory Factor Analysis
+Rotation Algorithm
+  Number of random starts                                       30
+  Maximum number of iterations                               10000
+  Derivative convergence criterion                       0.100D-04
+
+Input data file(s)
+  assign2.dat
+
+Input data format  FREE
+
+
+
+UNIVARIATE SAMPLE STATISTICS
+
+
+     UNIVARIATE HIGHER-ORDER MOMENT DESCRIPTIVE STATISTICS
+
+         Variable/         Mean/     Skewness/   Minimum/ % with                Percentiles
+        Sample Size      Variance    Kurtosis    Maximum  Min/Max      20%/60%    40%/80%    Median
+
+     V1                   21.673       0.575       1.000    0.67%      13.000     18.000     20.000
+             150.000     107.020      -0.015      55.000    0.67%      23.000     31.000
+     V2                   20.660      -0.081       7.000    1.33%      13.000     19.000     21.000
+             150.000      45.638      -0.880      36.000    0.67%      23.000     27.000
+     V3                   26.240       0.204       4.000    1.33%      15.000     21.000     26.000
+             150.000     149.516      -0.758      54.000    1.33%      29.000     38.000
+     V4                   34.693      -0.130      12.000    0.67%      27.000     33.000     35.000
+             150.000      82.733      -0.187      61.000    0.67%      37.000     42.000
+     V5                   34.373      -0.108       7.000    0.67%      22.000     32.000     35.000
+             150.000     161.261      -0.725      62.000    0.67%      38.000     45.000
+
+
+SUMMARY OF MODEL FIT INFORMATION
+
+
+                   Number of                   Degrees of
+     Model        Parameters      Chi-Square    Freedom     P-Value
+
+     1-factor          15             21.685         5       0.0006
+     2-factor          19              3.197         1       0.0738
+
+                                               Degrees of
+     Models Compared              Chi-Square    Freedom     P-Value
+
+     1-factor against 2-factor        17.578         4       0.0015
+
+
+
+RESULTS FOR EXPLORATORY FACTOR ANALYSIS
+
+
+           EIGENVALUES FOR SAMPLE CORRELATION MATRIX
+                  1             2             3             4             5
+              ________      ________      ________      ________      ________
+                4.026         0.434         0.247         0.172         0.121
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 1 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       15
+
+Loglikelihood
+
+          H0 Value                       -2448.821
+          H0 Scaling Correction Factor      1.0429
+            for MLR
+          H1 Value                       -2435.892
+          H1 Scaling Correction Factor      1.0803
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                    4927.643
+          Bayesian (BIC)                  4972.802
+          Sample-Size Adjusted BIC        4925.330
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                             21.685*
+          Degrees of Freedom                     5
+          P-Value                           0.0006
+          Scaling Correction Factor         1.1924
+            for MLR
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.149
+          90 Percent C.I.                    0.088  0.216
+          Probability RMSEA <= .05           0.006
+
+CFI/TLI
+
+          CFI                                0.969
+          TLI                                0.938
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            548.242
+          Degrees of Freedom                    10
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.031
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       3.78216
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1
+              ________
+ V1             0.884*
+ V2             0.778*
+ V3             0.943*
+ V4             0.810*
+ V5             0.922*
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1
+              ________
+      1         1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              V1            V2            V3            V4            V5
+              ________      ________      ________      ________      ________
+                0.218         0.395         0.110         0.344         0.150
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ V1             0.019
+ V2             0.036
+ V3             0.013
+ V4             0.033
+ V5             0.015
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              V1            V2            V3            V4            V5
+              ________      ________      ________      ________      ________
+                0.034         0.056         0.025         0.054         0.028
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1
+              ________
+ V1            45.660
+ V2            21.464
+ V3            70.895
+ V4            24.475
+ V5            60.753
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1
+              ________
+      1         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              V1            V2            V3            V4            V5
+              ________      ________      ________      ________      ________
+                6.381         7.017         4.389         6.428         5.361
+
+
+EXPLORATORY FACTOR ANALYSIS WITH 2 FACTOR(S):
+
+
+MODEL FIT INFORMATION
+
+Number of Free Parameters                       19
+
+Loglikelihood
+
+          H0 Value                       -2436.348
+          H0 Scaling Correction Factor      1.1221
+            for MLR
+          H1 Value                       -2435.892
+          H1 Scaling Correction Factor      1.0803
+            for MLR
+
+Information Criteria
+
+          Akaike (AIC)                    4910.697
+          Bayesian (BIC)                  4967.899
+          Sample-Size Adjusted BIC        4907.767
+            (n* = (n + 2) / 24)
+
+Chi-Square Test of Model Fit
+
+          Value                              3.197*
+          Degrees of Freedom                     1
+          P-Value                           0.0738
+          Scaling Correction Factor         0.2853
+            for MLR
+
+*   The chi-square value for MLM, MLMV, MLR, ULSMV, WLSM and WLSMV cannot be used
+    for chi-square difference testing in the regular way.  MLM, MLR and WLSM
+    chi-square difference testing is described on the Mplus website.  MLMV, WLSMV,
+    and ULSMV difference testing is done using the DIFFTEST option.
+
+RMSEA (Root Mean Square Error Of Approximation)
+
+          Estimate                           0.121
+          90 Percent C.I.                    0.000  0.280
+          Probability RMSEA <= .05           0.128
+
+CFI/TLI
+
+          CFI                                0.996
+          TLI                                0.959
+
+Chi-Square Test of Model Fit for the Baseline Model
+
+          Value                            548.242
+          Degrees of Freedom                    10
+          P-Value                           0.0000
+
+SRMR (Standardized Root Mean Square Residual)
+
+          Value                              0.003
+
+
+
+MINIMUM ROTATION FUNCTION VALUE       0.34834
+
+
+
+           GEOMIN ROTATED LOADINGS (* significant at 5% level)
+                  1             2
+              ________      ________
+ V1             1.037*       -0.155
+ V2            -0.006         0.857*
+ V3             0.929*        0.023
+ V4             0.025         0.861
+ V5             0.762*        0.171
+
+
+           GEOMIN FACTOR CORRELATIONS (* significant at 5% level)
+                  1             2
+              ________      ________
+      1         1.000
+      2         0.884*        1.000
+
+
+           ESTIMATED RESIDUAL VARIANCES
+              V1            V2            V3            V4            V5
+              ________      ________      ________      ________      ________
+                0.186         0.275         0.099         0.219         0.159
+
+
+           S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ V1             0.237         0.242
+ V2             0.027         0.110
+ V3             0.126         0.131
+ V4             0.681         0.687
+ V5             0.151         0.166
+
+
+           S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         0.108         0.000
+
+
+           S.E. ESTIMATED RESIDUAL VARIANCES
+              V1            V2            V3            V4            V5
+              ________      ________      ________      ________      ________
+                0.042         0.150         0.030         0.152         0.028
+
+
+           Est./S.E. GEOMIN ROTATED LOADINGS
+                  1             2
+              ________      ________
+ V1             4.380        -0.641
+ V2            -0.236         7.813
+ V3             7.375         0.174
+ V4             0.037         1.253
+ V5             5.058         1.028
+
+
+           Est./S.E. GEOMIN FACTOR CORRELATIONS
+                  1             2
+              ________      ________
+      1         0.000
+      2         8.202         0.000
+
+
+           Est./S.E. ESTIMATED RESIDUAL VARIANCES
+              V1            V2            V3            V4            V5
+              ________      ________      ________      ________      ________
+                4.418         1.833         3.260         1.440         5.783
+
+
+           FACTOR STRUCTURE
+                  1             2
+              ________      ________
+ V1             0.899         0.761
+ V2             0.751         0.852
+ V3             0.949         0.844
+ V4             0.787         0.884
+ V5             0.913         0.845
+
+
+     Beginning Time:  09:34:24
+        Ending Time:  09:34:24
+       Elapsed Time:  00:00:00
+
+
+Mplus VERSION 9.1.1 DEMO (Mac) has the following limitations:
+  Maximum number of dependent variables: 6
+  Maximum number of independent variables: 2
+  Maximum number of between variables: 2
+  Maximum number of continuous latent variables in time series analysis: 2
+
+
+MUTHEN & MUTHEN
+3463 Stoner Ave.
+Los Angeles, CA  90066
+
+Tel: (310) 391-9971
+Fax: (310) 391-8971
+Web: www.StatModel.com
+Support: Support@StatModel.com
+
+Copyright (c) 1998-2026 Muthen & Muthen
